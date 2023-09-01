@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog || P Hero Tube</title>
+    <!-- DaisyUI and Tailwind link here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font inter here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container mx-auto px-[5%]">
+      <nav>
+        <div class="navbar bg-base-100 my-4">
+          <div class="navbar-start">
+            <div>
+              <img src="./image/Logo.png" alt="" />
+            </div>
+          </div>
+          <div class="navbar-center">
+            <a
+              onclick="goHome()"
+              class="btn btn-ghost normal-case text-xl font-bold"
+              >Home</a
+            >
+          </div>
+          <div class="navbar-end">
+            <button
+              class="py-3 px-5 rounded-xl text-lg text-white font-medium hover:bg-[#e5e7eb] bg-[#FF1F3D]"
+            >
+              Blog
+            </button>
+          </div>
+        </div>
+        <hr />
+      </nav>
+    </header>
+    <main class="container mx-auto">
+      <!-- Questions and Answer container  -->
+      <section class="w-4/5 mx-auto mt-2 bg-gray-200 min-h-[780px]"></section>
+    </main>
+    <!---------- script here ----------->
+    <script>
+      const goHome = () => {
+        window.location.href = "http://127.0.0.1:5500/index.html";
+      };
+    </script>
+  </body>
+</html>
