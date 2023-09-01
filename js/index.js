@@ -1,10 +1,3 @@
-// const getApi = () => {
-//   fetch("https://openapi.programming-hero.com/api/videos/categories")
-//     .then((Response) => Response.json())
-//     .then((data) => console.log(data))
-//     .catch((err) => console.error(err));
-// };
-
 // get all categories api here
 const getApi = async () => {
   const response = await fetch(
@@ -85,8 +78,6 @@ const isNoData = (id) => {
   const div = document.createElement("div");
   div.innerHTML = `${status}`;
   notFoundContainer.appendChild(div);
-
-  // console.log(status);
 };
 
 const homePage = async () => {
@@ -107,12 +98,3 @@ const readBlog = () => {
 homePage();
 
 getApi();
-
-// const test = async () => {
-//   const response = await fetch(
-//     `https://openapi.programming-hero.com/api/videos/category/1005`
-//   );
-//   const data = await response.json();
-//   console.log(data.data.status ? "goood" : "notfound");
-// };
-// test();
