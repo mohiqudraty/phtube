@@ -84,7 +84,7 @@ const handleVideo = async (categoryId = 1000, sortByViews = "") => {
    class="w-[312px] h-[200px] object-cover" src="${video.thumbnail}"
   />
   <p class="text-xs text-white absolute right-3 bottom-4 bg-[#171717] py-1 px-1 ">${
-    years ? `${years}years ago` : months ? `${months} Months ago` : ""
+    years ? `${years}years ago` : extraMonths ? `${extraMonths} Months ago` : ""
   }
   ${!years && days ? `${days} Days ago` : ""}
   ${!years && extraHours > 0 ? `${extraHours} Hours` : ""}
