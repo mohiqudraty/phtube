@@ -16,7 +16,7 @@ const setCategory = (data) => {
   data.data.forEach((category) => {
     const div = document.createElement("div");
     div.innerHTML = `
-    <button class="py-2 px-5 rounded text-[#252525B2] hover:text-black bg-[#25252526]" onclick="handleVideo('${category.category_id}')">${category.category}</button>
+    <button id="${category.category_id}" class="py-2 px-5 rounded text-[#252525B2] hover:text-black bg-[#25252526]" onclick="handleVideo('${category.category_id}')">${category.category}</button>
     `;
     tabContainer.appendChild(div);
   });
@@ -25,6 +25,9 @@ const setCategory = (data) => {
 // set all video cards with required information &&&&& and call isNoData/ not found function
 const handleVideo = async (categoryId = 1000, sortByViews = "") => {
   default_id = categoryId;
+
+  const tabContainer = document.getElementById("tab-container");
+
   const response = await fetch(
     `https://openapi.programming-hero.com/api/videos/category/${categoryId}`
   );
@@ -40,6 +43,17 @@ const handleVideo = async (categoryId = 1000, sortByViews = "") => {
     });
   }
 
+  const items = tabContainer.children;
+  for (let item of items) {
+    const button = item.children[0];
+    if (button.getAttribute("id") == default_id) {
+      button.classList.add("bg-rose-600");
+      button.classList.add("text-gray-50");
+    } else {
+      button.classList.remove("bg-rose-600");
+      button.classList.remove("text-gray-50");
+    }
+  }
   isThereData(data);
 
   // setPostTime(data, categoryId);
@@ -133,6 +147,7 @@ const isThereData = (id) => {
 };
 
 const homePage = () => {
+  getApi();
   handleVideo();
 };
 
@@ -149,4 +164,3 @@ const sortByViews = () => {
 // call function which element i want to show default in home page
 
 homePage();
-getApi();
