@@ -152,10 +152,10 @@ const homePage = () => {
 };
 
 // button click to go blog page.
-const readBlog = () => {
-  // console.log("hello");
-  window.location.href = "http://127.0.0.1:5500/blog.html";
-};
+// const readBlog = () => {
+//   // console.log("hello");
+//   window.location.href = "http://127.0.0.1:5500/blog.html";
+// };
 
 const sortByViews = () => {
   handleVideo(default_id, default_id);
