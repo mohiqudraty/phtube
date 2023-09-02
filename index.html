@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>P Hero Tube</title>
+    <link rel="shortcut icon" href="./image/play.png" type="image/x-icon" />
     <!-- DaisyUI and Tailwind link here -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
@@ -35,7 +36,7 @@
           </div>
           <div class="navbar-center">
             <a
-              id="sort-btn"
+              onclick="sortByViews()"
               class="btn btn-ghost normal-case text-lg font-medium"
               >Sort by view</a
             >
